@@ -21,9 +21,9 @@ ssh -p 22 $client << 'EOF'
     sudo setfattr -n ceph.dir.layout -v "stripe_unit=67108864 stripe_count=1 object_size=67108864 pool=cephfsdata" /mnt/cephfs/FIO/64MB/
 
     mkdir /users/xweichu/FIO
+
     echo "[global]
 ioengine=libaio
-iodepth=1
 direct=1
 size=1g
 lat_percentiles=1
