@@ -33,6 +33,7 @@ ssh -p 22 $client << 'EOF'
     fio /users/xweichu/FIO/global.fio --rw=write --bs=65536k --directory=/mnt/cephfs/FIO/64MB/ --output-format=json --output=/users/xweichu/object_size/data/W64MB.json
 
     cd /users/xweichu/object_size
+    git pull
     git add data/
     git commit -m "uplaod data from test server"
     git push origin master
