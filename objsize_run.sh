@@ -32,10 +32,11 @@ ssh -p 22 $client << 'EOF'
     # fio /users/xweichu/FIO/global.fio --rw=write --bs=32768k --directory=/mnt/cephfs/FIO/32MB/ --output-format=json --output=/users/xweichu/object_size/data/W32MB.json --iodepth=1
     # fio /users/xweichu/FIO/global.fio --rw=write --bs=65536k --directory=/mnt/cephfs/FIO/64MB/ --output-format=json --output=/users/xweichu/object_size/data/W64MB.json --iodepth=1
 
-    for i in 1 2 3 4 5 6 7 8 9 10 
+    for i in 5 6 7 8 9 10 11
+    #1 2 3 4 5 6 7 8 9 10
     # 11 12 13 14 15 16 17 18 19 20 21 22 23
     do
-    fio /users/xweichu/FIO/global.fio --rw=write --bs=4096k --directory=/mnt/cephfs/FIO/4MB/ --output-format=json --output=/users/xweichu/object_size/data/W4MB_$i.json --rate_iops=$i
+    fio /users/xweichu/FIO/global.fio --rw=read --bs=4096k --directory=/mnt/cephfs/FIO/4MB/ --output-format=json --output=/users/xweichu/object_size/data/R4MB_$i.json --rate_iops=$i
     done
 
     cd /users/xweichu/object_size
