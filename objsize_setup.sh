@@ -1,4 +1,4 @@
-client='xweichu@c240g1-031305.wisc.cloudlab.us'
+client='xweichu@c240g1-031307.wisc.cloudlab.us'
 ssh -p 22 $client << 'EOF'
     mkdir /mnt/cephfs/FIO
     mkdir /mnt/cephfs/FIO/0.25MB

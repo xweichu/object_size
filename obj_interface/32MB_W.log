@@ -1,0 +1,30 @@
+Maintaining 16 concurrent writes of 33554432 bytes to objects of size 33554432 for up to 10 seconds or 0 objects
+Object prefix: benchmark_data_client.bigdataresearch.ucsc-c_11945
+  sec Cur ops   started  finished  avg MB/s  cur MB/s last lat(s)  avg lat(s)
+    0       0         0         0         0         0           -           0
+    1       9         9         0         0         0           -           0
+    2      14        14         0         0         0           -           0
+    3      15        21         6   63.9915        64     2.28694     2.38421
+    4      15        29        14   111.984       256     2.10411     2.37271
+    5      15        37        22    140.78       256     2.23958     2.31769
+    6      15        42        27   143.979       160     2.50521      2.3107
+    7      15        50        35   159.977       256     2.17008     2.29446
+    8      15        57        42   167.976       224      2.3431     2.28992
+    9      15        63        48   170.644       192     2.36308     2.29076
+   10      15        70        55   175.976       224     2.38801     2.31254
+Total time run:         10.450914
+Total writes made:      71
+Write size:             33554432
+Object size:            33554432
+Bandwidth (MB/sec):     217.397
+Stddev Bandwidth:       103.911
+Max bandwidth (MB/sec): 256
+Min bandwidth (MB/sec): 0
+Average IOPS:           6
+Stddev IOPS:            3
+Max IOPS:               8
+Min IOPS:               0
+Average Latency(s):     2.08541
+Stddev Latency(s):      0.547815
+Max latency(s):         2.73423
+Min latency(s):         0.363995

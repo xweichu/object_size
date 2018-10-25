@@ -1,4 +1,4 @@
-client='xweichu@c240g1-031305.wisc.cloudlab.us'
+client='xweichu@c240g1-031307.wisc.cloudlab.us'
 ssh -p 22 $client << 'EOF'
 
     rm /mnt/cephfs/FIO/0.25MB/Test.0.0
@@ -39,9 +39,10 @@ ssh -p 22 $client << 'EOF'
     fio /users/xweichu/FIO/global.fio --rw=read --bs=4096k --directory=/mnt/cephfs/FIO/4MB/ --output-format=json --output=/users/xweichu/object_size/data/R4MB_$i.json --rate_iops=$i
     done
 
-    cd /users/xweichu/object_size
-    git pull
-    git add data/
-    git commit -m "uplaod data from test server"
-    git push origin master
+    # cd /users/xweichu/object_size
+    # git pull
+    # git add data/
+    # git commit -m "uplaod data from test server"
+    # git push origin master
 EOF
+scp $client:/users/xweichu/object_size/data/* /Users/xweichu/Projects/object_size/data
